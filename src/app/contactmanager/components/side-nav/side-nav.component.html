@@ -1,0 +1,16 @@
+<mat-sidenav-container class="sidebar-container">
+    <mat-sidenav #sidenav class="app-sidenav mat-elevation-z10" [opened]="!isSmallScreen()" [mode]="mode">
+        <mat-toolbar color="primary">Contacts</mat-toolbar>
+        <mat-list>
+            <mat-list-item>1</mat-list-item>
+            <mat-list-item>2</mat-list-item>
+            <mat-list-item>3</mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+    <div class="side-nav-content">
+        <app-toolbar (toggleSideNav)="sidenav.toggle()" [isSmallScreen]="isSmallScreen()"></app-toolbar>
+        <div class="main">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</mat-sidenav-container>
